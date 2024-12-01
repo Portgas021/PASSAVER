@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - ONE PASSWORD</title>
+  <link rel="stylesheet" href="css/signup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Import Roboto font -->
+</head>
+<body>
+
+  <div class="container">
+    <!-- Card for Sign-Up -->
+    <div class="card shadow border-0 mx-auto">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+          <img src="img/op.png" alt="Logo" width="70" class="me-2"> <!-- Logo -->
+          <h3 class="card-title m-0">PASSAVER</h3> <!-- Title -->
+        </div>
+      </div>
+      <div class="card-body">
+        <!-- Sign-Up Section -->
+        <div id="signupSection">
+          <h1 class="text-center mb-4">S I G N &nbsp;U P</h1>
+          <form class="form-container">
+            <div class="mb-3">
+              <input type="password" class="form-control" id="newMasterPassword" placeholder="Create Master Password">
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" id="confirmMasterPassword" placeholder="Confirm Master Password">
+            </div>
+            <button type="submit" id="signupButton" class="btn btn-primary w-100">Sign Up</button>
+          </form>
+          <p class="auth-toggle mt-3">
+            Already have a Master Password? 
+            <a href="login.html" class="btn btn-link p-0">Login</a>
+          </p>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* General styles for dashboard page */
+body {  
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e0e5ec;
+  padding-top: 100px;
+}
+
+/* Main container */
+.main-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  max-width: 800px; /* Increase max-width */
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px auto;
+  overflow-y: auto; /* Add vertical scroll */
+  height: auto; /* Adjust height to fit content */
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the logo and text */
+  margin-bottom: 30px;
+}
+
+#logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  vertical-align: middle; /* Ensure vertical alignment */
+}
+
+#logoText {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 1px;
+  vertical-align: middle; /* Ensure vertical alignment */
+}
+
+/* Generate Password Section */
+#generatePasswordSection {
+  margin-bottom: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Align items vertically centered */
+}
+
+#generatePasswordButton,
+#copyPasswordButton {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  margin: 5px;
+}
+
+#generatedPassword {
+  padding: 5px;
+  font-size: 0.9rem;
+  width: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #f1f1f1;
+  cursor: not-allowed;
+}
+
+/* Dashboard section */
+#dashboard {
+  margin-bottom: 30px;
+}
+
+#currentSiteAccountsList{
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+#credentialsList {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.credential-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.credential-item:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.credential-item .credential-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  gap: 5px;
+  font-family: inherit; /* Use default font */
+  font-size: small; /* Set text to small */
+}
+
+.credential-item .credential-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.credential-item .credential-actions button {
+  padding: 3px 6px;
+  font-size: 0.8rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.credential-item .credential-actions button img {
+  width: 16px;
+  height: 16px;
+}
+
+.credential-item .credential-actions button:hover img {
+  filter: brightness(0.8);
+}
+
+.credential-item .credential-actions .save-button {
+  background-color: black; /* Save button color */
+  color: white;
+}
+
+.credential-item .credential-actions .cancel-button {
+  background-color: black; /* Cancel button color */
+  color: white;
+}
+
+/* Password input with eye icon */
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.passwordField {
+  padding: 12px;
+  font-size: 1rem;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.toggle-password {
+  position: absolute;
+  left: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #888;
+}
+
+.toggle-password:hover {
+  color: #333;
+}
+
+/* Action buttons inside table */
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.actions button {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.actions button:hover {
+  background-color: #0056b3;
+}
+
+/* Action buttons at the bottom */
+#manageActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Position the Logout button at the top right within the header */
+#logoutButton {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  margin: 5px;
+  background-color: transparent; /* Remove blue background color */
+}
+
+/* Make the Add Credential button below the credentials table */
+#manageActions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+/* Change Master Password Section */
+#changeMasterPasswordSection {
+  margin-bottom: 30px;
+}
+
+#changeMasterPasswordButton {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  margin: 5px;
+}
+
+#newMasterPassword,
+#confirmNewMasterPassword {
+  display: none; /* Hide by default */
+  padding: 5px;
+  font-size: 0.8rem;
+  margin: 5px 0;
+}
+
+/* Add Credential Form */
+#addCredentialForm {
+  display: none; /* Hide by default */
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 20px;
+  }
+
+  #logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  #logoText {
+    font-size: 1.2rem;
+  }
+
+  #generatePasswordButton,
+  #generatedPassword,
+  #addCredentialButton,
+  #changeMasterPasswordButton,
+  #deleteAccountButton,
+  #logoutButton {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .credential-item .credential-actions button img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .credential-item {
+    padding: 8px;
+  }
+
+  .credential-item .credential-info {
+    font-size: 0.8rem;
+  }
+}
+
+/* Delete Account and Logout buttons */
+#deleteAccountButton,
+#logoutButton {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  margin: 5px;
+}
+
+.d-flex.justify-content-between.mb-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically centered */
+  gap: 10px;
+}
+
+.d-flex.justify-content-between.mb-3 button {
+  width: 150px; /* Set a fixed width */
+  height: 40px; /* Set a fixed height */
+}
+
+.password-text {
+  font-family: inherit; /* Use default font */
+  font-size: small; /* Set text to small */
+  margin-left: 10px;
+}
+
+.credential-site,
+.credential-username {
+  font-family: inherit; /* Use default font */
+  font-size: small; /* Set text to small */
+}
+
+.credential-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.credential-site,
+.credential-username,
+.password-text {
+  font-family: inherit; /* Use default font */
+  font-size: small; /* Set text to small */
+}

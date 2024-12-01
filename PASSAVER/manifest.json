@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "PASSAVER",
+  "version": "1.0",
+  "description": "The Passaver extension securely stores and autofills your passwords, making it easy to manage and protect your accounts. With encryption, it keeps your data safe while simplifying logins across all your devices.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "login.html",
+    "default_icon": {
+      "16": "img/op.png",
+      "48": "img/op.png",
+      "128": "img/op.png"
+    }
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "icons": {
+    "16": "img/op.png",
+    "48": "img/op.png",
+    "128": "img/op.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content.js"]
+    }
+  ]
+}

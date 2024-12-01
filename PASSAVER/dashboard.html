@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <div class="container main-container">
+
+    <!-- Header: Logo and Title -->
+    <div class="d-flex justify-content-start mb-2" style="padding-top: 15px;">
+      <button id="logoutButton" class="btn btn-sm btn-danger">
+        <img src="img/lg.png" alt="Logout" style="width: 35px; height: 35px;">
+      </button>
+    </div>
+    <header class="d-flex align-items-center">
+      <div class="d-flex align-items-center">
+        <img id="logo" src="img/op.png" alt="Logo" style="width: 70px; height: 70px; margin-right: 10px;">
+        <span id="logoText" class="fs-10 fw-bold text-dark d-flex align-items-center">
+          PASSAVER
+        </span>
+      </div>
+    </header>
+
+    <!-- Generate Password Section (Moved to top) -->
+    <div id="generatePasswordSection" class="text-center mb-3">
+      <button id="generatePasswordButton" class="btn btn-sm btn-success me-2">Generate Password</button>
+      <input type="text" id="generatedPassword" class="form-control form-control-sm d-inline w-auto" readonly>
+      <button id="copyPasswordButton" class="btn btn-sm btn-primary ms-2">
+        <img src="img/copy.png" alt="Copy" style="width: 20px; height: 20px;">
+      </button>
+    </div>
+
+    <!-- Action Buttons: Add Credential, Change Password, Delete Account -->
+    <div class="d-flex justify-content-between mb-3">
+      <button id="showAddCredentialFormButton" class="btn btn-sm btn-primary">Add Credential</button>
+      <button id="changeMasterPasswordButton" class="btn btn-sm btn-warning">Change Password</button>
+      <button id="deleteAccountButton" class="btn btn-sm btn-danger">Delete Account</button>
+    </div>
+
+    <!-- Add Credential Form -->
+    <div id="addCredentialForm" class="mb-3 d-none">
+      <h2>Add Credential</h2>
+      <form id="credentialForm">
+        <div class="form-group">
+          <label for="siteName" class="form-label">Website Name</label>
+          <input type="text" id="siteName" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" id="username" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-sm btn-success">Save Credential</button>
+        <button type="button" id="cancelAddCredentialButton" class="btn btn-sm btn-secondary">Cancel</button>
+      </form>
+    </div>
+
+    <!-- Change Master Password Section -->
+    <div id="changeMasterPasswordSection" class="mb-3">
+      <input type="password" id="newMasterPassword" class="form-control form-control-sm mb-2" placeholder="Enter new master password">
+      <input type="password" id="confirmNewMasterPassword" class="form-control form-control-sm mb-2" placeholder="Confirm new master password">
+    </div>
+
+    <!-- Current Site Accounts Section -->
+    <div id="currentSiteAccountsSection" class="mb-3">
+      <h2 class="text-center">Accounts for Current Site</h2>
+      <div id="currentSiteAccountsList" class="list-group">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboard" class="mb-3">
+      <h2 class="text-center">Saved Credentials</h2>
+      <div id="credentialsList" class="list-group">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/popup.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
